@@ -1,0 +1,6 @@
+.venv-windows/
+build/
+dist/
+setup/
+App.spec
+As.spec
