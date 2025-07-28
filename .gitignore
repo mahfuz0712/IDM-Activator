@@ -2,5 +2,6 @@
 build/
 dist/
 setup/
+src/
 App.spec
 As.spec
