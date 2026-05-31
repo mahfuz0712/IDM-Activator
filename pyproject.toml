@@ -1,0 +1,18 @@
+[project]
+name = "idm-activator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "customtkinter>=5.2.2",
+    "gspread>=6.2.1",
+    "pillow>=12.2.0",
+    "pycryptodome>=3.23.0",
+    "pyinstaller>=6.20.0",
+    "pyqt6>=6.11.0",
+    "requests>=2.34.2",
+    "taskipy>=1.14.1",
+]
+[tool.taskipy.tasks]
+build = "pyinstaller src/main.py --onefile --icon src/assets/icon.ico"
