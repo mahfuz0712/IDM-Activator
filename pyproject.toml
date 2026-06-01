@@ -13,6 +13,9 @@ dependencies = [
     "pyqt6>=6.11.0",
     "requests>=2.34.2",
     "taskipy>=1.14.1",
+    "watchdog>=6.0.0",
 ]
 [tool.taskipy.tasks]
-build = "pyinstaller src/main.py --onefile --icon src/assets/icon.ico"
+dev = "uv run watchdog auto-restart --patterns='*.py' --recursive python src/app.py"
+build = "pyinstaller src/main.py --onedir --icon src/assets/icon.ico"
+b = 'pyinstaller --onefile --windowed --add-data "src/IAS.cmd;." --add-data "src/assets/icon.ico;assets" src/reg.py'
